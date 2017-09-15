@@ -5,7 +5,7 @@
 /* betty style doc for function main goes there */
 /**
  * main - Entry point
- *
+ * generate random number and display whether it's positive, negative or zero
  * Return: Always 0 (Success)
  */
 int main(void)
