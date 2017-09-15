@@ -7,7 +7,8 @@
  * main - Entry point
  * generate random number, find it's last digit
  * and display greater than 5, zero, or less than 6 or zero
- * Return: Always 0 (Success)                                                                             */
+ * Return: Always 0 (Success)
+*/
 
 int main(void)
 {
