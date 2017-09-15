@@ -12,6 +12,7 @@ int main(void)
 {
 /* your code goes there */
 	char ch;
+
 	for (ch = 'a'; ch <= 'z'; ch++)
 		putchar(ch);
 	for (ch = 'A'; ch <= 'Z'; ch++)
