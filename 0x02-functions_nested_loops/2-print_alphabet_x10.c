@@ -1,4 +1,9 @@
 #include "holberton.h"
+/*
+*
+* print alphabet ten times
+*
+*/
 
 void print_alphabet_x10(void)
 {
