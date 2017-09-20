@@ -1,7 +1,10 @@
 #include "holberton.h"
-/*
-* Script that prints string Holberton
-*/
+
+/**
+ * main - print the string Holberton
+ *
+ * Return: Always 0.
+ */
 
 int main(void)
 {
