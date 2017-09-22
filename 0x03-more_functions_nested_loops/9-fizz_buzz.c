@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 /**
-  * main - classic interview FizzBuzz question
+  * main - interview FizzBuzz question
   *
   * Return: prints numbers from 1 to 100 but Fizz for
   * multiples of 3, Buzz for multiples of 5, FizzBuzz
@@ -11,10 +11,8 @@ int main(void)
 {
 int i;
 
-for (i = 1; i <= 100; i++)
+for (i = 1; i < 101; i++)
 {
-	if (i < 100)
-	{
 	if ((i % 3 == 0) && (i % 5 == 0))
 	{
 		printf("FizzBuzz");
@@ -31,9 +29,10 @@ for (i = 1; i <= 100; i++)
 	{
 		printf("%d", i);
 	}
-	printf(" ");
-	} else
-	printf("\n");
-}
- return (0);
+	if (i < 100)
+	{
+		printf(" ");
+	}
+} printf("\n");
+return (0);
 }
