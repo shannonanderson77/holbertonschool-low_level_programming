@@ -22,7 +22,6 @@ void more_numbers(void)
 	} else
 		_putchar(i + 48);
 	}
-	_putchar(' ');
 	 _putchar('\n');
 	}
 }
