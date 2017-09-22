@@ -11,11 +11,10 @@ int main(void)
 {
 int i;
 
-if (i < 100)
-printf('\n');
-{
 for (i = 1; i <= 100; i++)
 {
+	if (i < 100)
+	{
 	if ((i % 3 == 0) && (i % 5 == 0))
 	{
 		printf("FizzBuzz");
@@ -32,7 +31,9 @@ for (i = 1; i <= 100; i++)
 	{
 		printf("%d", i);
 	}
-} printf("\n");
-
-} return (0);
+	printf(" ");
+	} else
+	printf("\n");
+}
+ return (0);
 }
