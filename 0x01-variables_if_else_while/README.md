@@ -1,8 +1,8 @@
-Readme\n
+#Readme
 
-C - variables, if, else, while\n
+##C - variables, if, else, while
 
-arithmetic operators, logical operators, relational operators\n
-TRUE and FALSE values\n
-ASCII character set\n
-gcc flags\n
+###arithmetic operators, logical operators, relational operators
+###TRUE and FALSE values
+###ASCII character set
+###gcc flags
