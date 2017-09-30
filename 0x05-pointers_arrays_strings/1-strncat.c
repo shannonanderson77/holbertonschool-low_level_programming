@@ -28,7 +28,8 @@ while (src[j] != '\0' && src[j] < n)
 	i++;
 	j++;
 }
-} else
+}
+else
 {
 	dest[i] = src[j];
 	i++;
