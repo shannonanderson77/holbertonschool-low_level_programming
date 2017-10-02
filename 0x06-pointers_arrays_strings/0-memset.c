@@ -7,6 +7,7 @@
   * @n: takes an unsigned int; the size of the memory to fill
   * @b: takes a char; the constant to print;
   * @s: the address of the memory to print to
+  * Return: a pointer to the filled memory area
   */
 char *_memset(char *s, char b, unsigned int n)
 {
