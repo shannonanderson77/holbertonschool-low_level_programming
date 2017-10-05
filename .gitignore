@@ -1,0 +1,12 @@
+# Compiled source #
+###################
+*.o
+*.exe
+_putchar.c
+*main.c
+test*
+
+
+# Temps #
+#########
+*~
