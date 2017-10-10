@@ -17,7 +17,7 @@ char *p;
 
 p = malloc((sizeof(s1) - 1) + sizeof(s2));
 
-for (j = 0; j != '\0'; j++)
+	for (j = 0; j != '\0'; j++)
 	{
 		for (i = 0; i != '\0'; i++)
 		{
