@@ -36,7 +36,7 @@ i = 0;
 if (str == NULL)
 	return (NULL);
 len = _strlen(str);
-p = malloc(len * sizeof(char));
+p = malloc(len *sizeof(char));
 if (p == NULL)
 	return (NULL);
 while (i <= len)
