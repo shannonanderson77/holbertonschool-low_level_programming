@@ -3,6 +3,23 @@
 #include "holberton.h"
 
 /**
+ * _strlen - a function that returns the length
+ * of a string
+ * @s: takes a character string
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+int len = 0;
+	while (*s != '\0')
+	{
+	len++;
+	s++;
+	}
+	return (len);
+}
+
+/**
   * _strdup - a function that returns a pointer to a newly
   * allocated space in memory which contains a copy of the
   * string given as a parameter
@@ -16,9 +33,11 @@ unsigned int len;
 char *p;
 
 i = 0;
+if (str == NULL)
+	return (NULL);
 len = _strlen(str);
 p = malloc(len * sizeof(char));
-if (str == NULL || p == NULL)
+if (p == NULL)
 	return (NULL);
 while (i <= len)
 {
