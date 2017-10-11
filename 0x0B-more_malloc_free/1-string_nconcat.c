@@ -46,7 +46,6 @@ total_length = _strlen(s1) + n + 1;
 p = malloc(total_length);
 if (p == NULL)
 	return (NULL); /* if memory allocation fails */
-
 i = 0;
 j = 0;
 while (s1[i] != '\0')
@@ -54,13 +53,12 @@ while (s1[i] != '\0')
 	p[i] = s1[i];
 	i++;
 }
-while (s2[j] != s2[n])
+while (s2[j] != '\0' && j <= n)
 {
 	p[i] = s2[j];
 	i++;
 	j++;
 }
 p[i] = '\0';
-i++;
 return (p);
 }
