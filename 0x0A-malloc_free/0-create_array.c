@@ -17,14 +17,12 @@ char *p;
 
 i = 0;
 p = malloc(size * sizeof(c));
+if (size == 0)
+return (NULL);
 while (i < size)
 {
 p[i] = c;
 ++i;
 }
-if (size != 0)
-{
 return (p);
-}
-return (NULL);
 }
