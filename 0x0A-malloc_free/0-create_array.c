@@ -17,9 +17,9 @@ char *p;
 
 i = 0;
 p = malloc(size * sizeof(char));
-if (size == 0)
+if (size == 0 || p == NULL)
 return (NULL);
-while (i <= size)
+while (i < size)
 {
 p[i] = c;
 ++i;
