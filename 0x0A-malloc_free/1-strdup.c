@@ -17,8 +17,8 @@ char *p;
 
 i = 0;
 len = _strlen(str);
-p = malloc(len * sizeof(*char));
-if (str == NULL)
+p = malloc(len *sizeof(char));
+if (str == NULL || p == NULL)
 	return (NULL);
 while (i <= len)
 {
