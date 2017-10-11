@@ -20,20 +20,20 @@ if (width == 0 || height == 0)
 p = malloc(height * sizeof(int*));
 	if (p == NULL)
 		return (NULL);
-	while (i < height)
-	{
+while (i < height)
+{
 p[i] = malloc(width * sizeof(int));
 	if (p[i] == NULL)
 	{
 	while (i >= 0)
 	{
-		free (p[i]);
-		i--;
-	} free (p); 
+	free(p[i]);
+	i--;
+	} free(p);
 	return (NULL);
 	}
 	i++;
-	}
+}
 i = 0;
 while (i < height)
 {
