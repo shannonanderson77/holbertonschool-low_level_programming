@@ -16,7 +16,7 @@ unsigned int i;
 char *p;
 
 i = 0;
-p = malloc(size * sizeof(c));
+p = malloc(size * sizeof(char));
 if (size == 0)
 return (NULL);
 while (i < size)
