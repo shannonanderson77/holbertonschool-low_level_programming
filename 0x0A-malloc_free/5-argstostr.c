@@ -20,28 +20,26 @@ char *p;
 if (ac == 0 || av == NULL)
 	return (NULL);
 
-/*******/
 for (i = 0; i < ac; i++)
 	{
 	for (j = 0; av[i][j] != '\0'; j++)
 	{
 	count += 1;
-	} sum += count + 1;
+	} sum += count + 1; /* finds how many chars total */
 	}
 p = malloc(sum + 1 * sizeof(char));
 
-if (p == NULL)
+if (p == NULL) /* checks for successful memory alloc */
 	return (NULL);
-/********/
 count = 0;
 for (i = 0; i < ac; i++)
 {
-	for (j = 0; j < av[i][j]; j++)
+	for (j = 0; av[i][j] != '\0'; j++)
 	{
 		p[count] = av[i][j];
 		count++;
-	} p[count] = '\n';
+	} p[count] = '\n'; /* to add newline */
 	count++;
-} p[count] = '\0';
+} p[count] = '\0'; /* ends string with null byte */
 return (p);
 }
