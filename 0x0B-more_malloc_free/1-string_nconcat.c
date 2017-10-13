@@ -53,7 +53,7 @@ while (s1[i] != '\0')
 	p[i] = s1[i];
 	i++;
 }
-while (s2[j] != '\0' && j <= n)
+while (s2[j] != '\0' && j < n)
 {
 	p[i] = s2[j];
 	i++;
