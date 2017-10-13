@@ -39,7 +39,7 @@ if (s1 == NULL)
 	s1 = "";
 if (s2 == NULL)
 	s2 = "";
-if (n >= _strlen(s2))
+if (n > _strlen(s2))
 	total_length = _strlen(s1) + _strlen(s2) + 1;
 else
 total_length = _strlen(s1) + n + 1;
