@@ -21,6 +21,9 @@ p = malloc(nmemb * size);
 if (p == NULL)
 	return (NULL); /* if malloc fails, _calloc returns NULL */
 for (i = 0; i <= nmemb; i++)
+{
 	p[i] = 0; /* set memory to zero */
+}
 return (p);
+free(p);
 }
