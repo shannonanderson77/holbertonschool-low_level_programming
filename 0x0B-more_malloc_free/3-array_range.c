@@ -19,11 +19,11 @@ p = malloc((max - min + 1) * sizeof(int));
 if (p == NULL)
 	return (NULL);
 i = 0;
-while (i <= max)
+while (min <= max)
 {
 	p[i] = min;
 	i++;
 	min++;
 }
-	return (p);
+return (p);
 }
