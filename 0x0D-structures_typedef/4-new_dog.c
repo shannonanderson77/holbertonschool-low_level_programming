@@ -53,8 +53,8 @@ for (i = 0; owner[i] != '\0'; i++)
 p_new_dog = malloc(sizeof(dog_t)); /* allocate memory for new dog */
 if (p_new_dog != NULL)
 {
-p_new_dog->name = name;
-p_new_dog->owner = owner;
+p_new_dog->name = p_name;
+p_new_dog->owner = p_owner;
 p_new_dog->age = age;
 }
 else
