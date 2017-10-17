@@ -15,23 +15,24 @@ dog_t *p_new_dog; /* a pointer to new dog of type dog_t*/
 char *p_name; /* a pointer to copy of name for new dog */
 char *p_owner; /* a pointer to copy of owner for new dog */
 int i;
-int name_length; /* holds copied name length */
-int owner_length; /* holds copied owner length */
+int counter; /* holds name length and owner length*/
+int name_length;
+int owner_length;
 
-name_length = 0;
-while (*p_name != '\0')
+counter = 0;
+while (name[counter] != '\0')
 {
 	name_length++;
-	p_name++;
+	counter++;
 } /* determines length of copied name string */
 p_name = malloc(name_length *sizeof(char));
 if (p_name == NULL)
 	return (NULL);
-owner_length = 0;
-while (*p_owner != '\0')
+counter = 0;
+while (owner[counter] != '\0')
 {
 	owner_length++;
-	p_owner++;
+	counter++;
 } /* determine length of copied owner */
 p_owner = malloc(owner_length *sizeof(char));
 if (p_owner == NULL)
