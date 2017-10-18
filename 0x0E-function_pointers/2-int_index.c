@@ -23,7 +23,5 @@ for (i = 1; i < size; i++)
 	{
 	if (cmp(array[i]) != 0)
 		return (i);
-	else if (i == size)
-		return (-1);
-} return (i);
+	} return (-1);
 }
