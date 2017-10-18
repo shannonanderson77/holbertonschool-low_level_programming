@@ -10,6 +10,9 @@
   */
 void print_name(char *name, void (*f)(char *))
 {
-if (f && name)
-f(name);
+if (name == NULL)
+	return;
+else if (f == NULL)
+	return;
+else f(name);
 }
