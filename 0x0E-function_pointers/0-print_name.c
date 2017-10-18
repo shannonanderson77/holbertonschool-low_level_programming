@@ -14,5 +14,6 @@ if (name == NULL)
 	return;
 else if (f == NULL)
 	return;
-else f(name);
+else
+	f(name);
 }
