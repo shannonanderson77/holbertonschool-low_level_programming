@@ -23,9 +23,8 @@ for (i = 0; i < n; i++)
 	/* need to check if separator is NULL */
 	if (i < n - 1 && separator != NULL)
 	printf("%s", separator);
-	else
-	printf("\n");
 }
+printf("\n");
 va_end(a_list);
 return;
 }
