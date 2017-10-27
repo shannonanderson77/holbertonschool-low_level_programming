@@ -16,8 +16,8 @@ while (h != NULL) /* while pointer to first object in string is not NULL */
 if (h->str == NULL)
 {
 	printf("[0] (nil)\n");
-
-} else
+}
+else
 {
 printf("[%i] %s\n", h->len, h->str); /* print the members str len and str */
 }
