@@ -8,15 +8,15 @@
   */
 int sum_listint(listint_t *head)
 {
-int data;
+unsigned int data;
 
 data = 0;
-if (head->next == NULL)
+if (head == NULL) /*if list is empty*/
 	return (0);
-while (head->next != NULL)
+while (head != NULL) /*while not at the end of list*/
 {
-	head = head->next;
-	data += head->n;
+	data += head->n; /*add data values at each node*/
+	head = head->next; /*traverse list*/
 }
-return (data);
+return (data); /*return the sum*/
 }
