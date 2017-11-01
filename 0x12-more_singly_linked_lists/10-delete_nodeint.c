@@ -32,7 +32,7 @@ if (temp_node == NULL || temp_node->next == NULL)
 	return (-1);
 }
 
-temp_node->next = (temp_node->next)->next;
-free(temp_node->next);
+temp_node = temp_node->next;
+free(temp_node);
 return (1);
 }
