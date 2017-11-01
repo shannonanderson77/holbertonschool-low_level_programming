@@ -9,14 +9,12 @@ void free_listint2(listint_t **head)
 {
 listint_t *temp_node;
 
-if (head == NULL) /*if list is empty*/
+if (head == NULL || (*head) == NULL) /*if list is empty*/
 	return;
 while ((*head)->next != NULL) /*while not at end of list*/
 {
-temp_node = *head; /*make temp_node the head*/
-*head = (*head)->next; /*traverse the list*/
-free(temp_node); /*free temp_node as head moves along the list*/
-}
-free(*head); /*free the head once the end is reached*/
-return;
+temp_node = (*head)->next; /*traverse the list with temp as the head*/
+free(*head); /*free head as temp_node moves along the list*/
+*head = temp_node; /*make temp node the new head*/
+} free(*head);
 }
