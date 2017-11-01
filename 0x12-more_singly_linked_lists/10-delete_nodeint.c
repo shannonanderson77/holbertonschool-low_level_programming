@@ -28,6 +28,7 @@ return (1);
 for (count = 0; count < index - 1 && temp_node != NULL; count++)
 {
 	temp_node = temp_node->next; /*traverse the list*/
+	if (hold_node != NULL)
 	hold_node = hold_node->next;
 }
 if (temp_node == NULL)
