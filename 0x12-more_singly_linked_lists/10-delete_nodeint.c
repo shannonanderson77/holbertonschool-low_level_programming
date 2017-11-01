@@ -27,10 +27,11 @@ for (count = 0; count < index - 1 && temp_node != NULL; count++)
 {
 	temp_node = temp_node->next; /*traverse the list*/
 }
-if (temp_node == NULL)
+if (temp_node == NULL || temp_node->next == NULL)
 {
 	return (-1);
 }
+
 temp_node->next = (temp_node->next)->next;
 free(temp_node->next);
 return (1);
