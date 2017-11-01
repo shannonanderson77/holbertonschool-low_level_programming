@@ -13,6 +13,8 @@ listint_t *new_node; /*new_node at the end of list*/
 listint_t *temp_node; /*temp_node to traverse the list*/
 
 new_node = (listint_t *)malloc(sizeof(listint_t)); /*memory for new_node*/
+if (new_node == NULL)
+	return (*head);
 new_node->n = n; /*write contents into new_node*/
 new_node->next = NULL; /*cause it's the end of the list*/
 temp_node = (*head); /*to hold the address of head*/
