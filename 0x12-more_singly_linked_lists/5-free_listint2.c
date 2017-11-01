@@ -16,5 +16,7 @@ while ((*head)->next != NULL) /*while not at end of list*/
 temp_node = (*head)->next; /*traverse the list with temp as the head*/
 free(*head); /*free head as temp_node moves along the list*/
 *head = temp_node; /*make temp node the new head*/
-} free(*head);
+}
+free(*head);
+*head = NULL;
 }
