@@ -30,7 +30,7 @@ for (count = 0; count < index - 1 && temp_node != NULL; count++)
 	temp_node = temp_node->next; /*traverse the list*/
 	hold_node = hold_node->next;
 }
-if (temp_node == NULL || temp_node->next == NULL)
+if (temp_node == NULL)
 {
 	return (-1);
 }
