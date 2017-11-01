@@ -30,6 +30,7 @@ if (idx == 0)
 	{
 	new_node->next = *head;
 	*head = new_node;
+	return (new_node);
 	}
 temp_node = *head; /*hold head*/
 for (count = 0; count < idx - 1 && temp_node != NULL; count++)
