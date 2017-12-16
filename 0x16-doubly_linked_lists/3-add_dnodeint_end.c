@@ -32,8 +32,8 @@ while (temp_node->next != NULL && temp_node != NULL)
 {
 	temp_node = temp_node->next;
 }
-	temp_node->next = new_node;
-	new_node->next = NULL;
-	new_node->prev = temp_node;
-	return (new_node);
+new_node->next = NULL;
+new_node->prev = temp_node;
+temp_node->next = new_node;
+return (new_node);
 }
