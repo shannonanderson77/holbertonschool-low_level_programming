@@ -14,23 +14,25 @@ dlistint_t *new_node;
 dlistint_t *temp_node;
 
 new_node = malloc(sizeof(dlistint_t));
-new_node->n = n;
 if (new_node == NULL)
 {
 	return (NULL);
 }
+new_node->n = n;
+new_node->next = NULL;
 if ((*head) == NULL)
 {
-	new_node->next = NULL;
+	(*head) = new_node;
 	new_node->prev = NULL;
 	(*head) = new_node;
 	return (new_node);
 }
 temp_node = (*head);
-new_node->next = NULL;
 while (temp_node->next != NULL)
-	temp_node = temp_node->next; /*why does this work? Liz*/
+{
+	temp_node = temp_node->next;
+}
 temp_node->next = new_node;
 new_node->prev = temp_node;
-return (*head);
+return (new_node);
 }
