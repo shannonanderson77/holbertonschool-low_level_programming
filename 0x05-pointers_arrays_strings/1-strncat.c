@@ -25,7 +25,7 @@ while (src[j] != '\0')
 	j++;
 }
 
-if (j < n)
+if (j <= n)
 {
 	j = 0;
 	while (src[j] != '\0' && src[j] < n)
@@ -38,9 +38,12 @@ if (j < n)
 else
 {
 	j = 0;
+	while (src[j] != '\0' && j != n)
+	{
 	dest[i] = src[j];
 	i++;
 	j++;
+	}
 }
 return (dest);
 }
