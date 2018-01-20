@@ -27,6 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		if (strcmp(temp_node->key, key) == 0)
 		{
 			free(temp_node->value);
+			/* update the value at collission */
 			temp_node->value = strdup(value);
 			return (1);
 		}
@@ -34,6 +35,8 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	/* if no collission add new_node to table at index */
 	new_node->key = strdup(key);
 	new_node->value = strdup(value);
+	if (new_node->key == NULL || new_node->value == NULL)
+		return (0);
 	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 	return (1);
