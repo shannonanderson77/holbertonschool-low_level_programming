@@ -1,8 +1,6 @@
 # -*-Makefile-*-
-CC=GCC
+CC=gcc
 SRC=main.c holberton.c
 
-all: holberton
-
-holberton: $(SRC)
-	gcc $(SRC) -o holberton
+all: $(SRC)
+	$(CC) $(SRC) -o holberton
