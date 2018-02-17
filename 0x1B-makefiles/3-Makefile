@@ -13,12 +13,11 @@ $(NAME): $(OBJ)
 	$(CC) -c $< -o $@
 
 clean:
-	$(RM) $(NAME) *.tmp .~
+	$(RM) $(NAME) *~
 
 oclean:
-	$(RM) *.o
+	$(RM) $(OBJ)
 
-fclean:
-	$(RM) *.o $(NAME) *.tmp .~
+fclean: clean oclean
 
 re: clean all
