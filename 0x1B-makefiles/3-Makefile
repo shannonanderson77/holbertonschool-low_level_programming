@@ -7,7 +7,7 @@ RM=rm -f
 all: $(SRC) $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(OBJ) -o $@
+	$(CC) $(SRC) -o $@
 
 .c.o:
 	$(CC) -c $< -o $@
