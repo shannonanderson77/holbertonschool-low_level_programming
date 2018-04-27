@@ -71,19 +71,18 @@ void get_func_monty(char *tokens)
 
 void tokenize_monty(char *tokens)
 {
-	char *line;
 	char *line_items;
+	int i = 0;
 
-	line = strtok(tokens, "");
-	while (line != NULL)
+	printf("start\n");
+	printf("%s", tokens);
+	printf("finish\n");
+	line_items = strtok(tokens, " ");
+	while (line_items != NULL)
 	{
-		line_items = strtok(line, "");
-		while (line_items != NULL)
-		{
-			printf("I'm from tokenize_monty: %s\n", line);
-			line_items = strtok(NULL, "");
-		}
-		line = strtok(NULL, "");
+		printf("%s\n", line_items);
+		i++;
+		line_items = strtok(NULL, " ");
 	}
 }
 
