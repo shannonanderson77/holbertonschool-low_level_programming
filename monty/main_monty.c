@@ -80,9 +80,11 @@ void tokenize_monty(char *tokens)
 	line_items = strtok(tokens, " ");
 	while (line_items != NULL)
 	{
-		printf("%s\n", line_items);
-		i++;
-		line_items = strtok(NULL, " ");
+		for (i = 0; line_items != NULL; i++)
+		{
+			printf("%c\n", line_items[i]);
+			line_items = strtok(NULL, " ");
+		}
 	}
 }
 
