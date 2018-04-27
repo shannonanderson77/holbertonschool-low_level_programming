@@ -4,10 +4,11 @@
 #include <stdio.h>
 #include <string.h>
 #include "monty.h"
-#define DELIM " \t\r\n\a"
+#define DELIM " "
 
 
 void get_func_monty(char *tokens);
+void tokenize_monty(char *tokens);
 /**
  *
  */
@@ -38,18 +39,13 @@ int main(int argc, char **argv)
 	}
 	while (getline(&buffer, &buffer_size, fd) != -1)
 	{
-		tokens = strtok(buffer, DELIM);
-		while (tokens != NULL)
-		{
-			get_func_monty(tokens);
-			tokens = strtok(NULL, DELIM);
-		}
+		tokenize_monty(buffer);
 		line_number++;
 	}
 	free(tokens);
 	free(buffer);
 	fclose(fd);
-	return (0);
+return (0);
 }
 
 void get_func_monty(char *tokens)
@@ -60,49 +56,59 @@ void get_func_monty(char *tokens)
 	instruction_t opcodes[] = {
 		{"push", op_push},
 		{"pall", op_pall},
-		{"pop", op_pop},
-		{"swap", op_swap},
-		{"add", op_add},
-		{"nop", op_nop},
 		{NULL, NULL}
 			};
-
+	(void)opcodes;
 	if (tokens == NULL)
 		return;
 	while (tokens[i] != '\0')
 	{
+		printf("%c", tokens[i]);
 		len_tokens++;
 		i++;
 	}
-	printf("%s", opcodes.command);
 }
 
-void (*op_push)(void)
+void tokenize_monty(char *tokens)
 {
+	char *line;
+	char *line_items;
+
+	line = strtok(tokens, "");
+	while (line != NULL)
+	{
+		line_items = strtok(line, "");
+		while (line_items != NULL)
+		{
+			printf("I'm from tokenize_monty: %s\n", line);
+			line_items = strtok(NULL, "");
+		}
+		line = strtok(NULL, "");
+	}
+}
+
+void op_push(stack_t **stack, unsigned int line_number)
+{
+	stack_t *new_node;
+	(void)line_number;
+
+	if ((*stack) == NULL)
+		return;
+	new_node =  malloc(sizeof(stack_t));
+	if (new_node == NULL)
+		return;
 	return;
 }
 
-void (*op_pall)(void)
+void op_pall(stack_t **stack, unsigned int line_number)
 {
-	return;
-}
+	stack_t *new_node;
+	(void)line_number;
 
-void (*op_pop)(void)
-{
-	return;
-}
-
-void (*op_swap)(void)
-{
-	return;
-}
-
-void (*op_add)(void)
-{
-	return;
-}
-
-void (*op_nop)(void)
-{
+	if ((*stack) == NULL)
+		return;
+	new_node =  malloc(sizeof(stack_t));
+	if (new_node == NULL)
+		return;
 	return;
 }
