@@ -57,17 +57,21 @@ void get_func_monty(char *line_items)
 	instruction_t opcodes[] = {
 		{"push", op_push},
 		{"pall", op_pall},
+		{"pop", op_pop},
+		{"swap", op_swap},
 		{NULL, NULL}
 			};
-	(void)opcodes;
 	if (line_items == NULL)
 		return;
 	printf("----\n");
 	for (i = 0 ; opcodes[i].opcode != NULL; i++)
 	{
-		if (opcodes[i].opcode == opcodes[i].f)
+		if (opcodes[i].opcode == opcodes[0].opcode)
 		{
-			printf("%s", opcodes[i].f);
+			printf("%s\n", opcodes[0].opcode);
+			printf("%s\n", opcodes[1].opcode);
+			printf("%s\n", opcodes[2].opcode);
+			printf("%s\n", opcodes[3].opcode);
 		}
 	}
 	printf("----\n");
@@ -75,7 +79,6 @@ void get_func_monty(char *line_items)
 	i = 0;
 	while (holder[i] != '\0')
 	{
-		printf("%c\n", holder[i]);
 		line_number++;
 		i++;
 	}
@@ -108,6 +111,32 @@ void op_push(stack_t **stack, unsigned int line_number)
 }
 
 void op_pall(stack_t **stack, unsigned int line_number)
+{
+	stack_t *new_node;
+	(void)line_number;
+
+	if ((*stack) == NULL)
+		return;
+	new_node =  malloc(sizeof(stack_t));
+	if (new_node == NULL)
+		return;
+	return;
+}
+
+void op_pop(stack_t **stack, unsigned int line_number)
+{
+	stack_t *new_node;
+	(void)line_number;
+
+	if ((*stack) == NULL)
+		return;
+	new_node =  malloc(sizeof(stack_t));
+	if (new_node == NULL)
+		return;
+	return;
+}
+
+void op_swap(stack_t **stack, unsigned int line_number)
 {
 	stack_t *new_node;
 	(void)line_number;
