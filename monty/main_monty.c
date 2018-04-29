@@ -7,8 +7,8 @@
 #define DELIM " "
 
 
-void get_func_monty(char *tokens);
-void tokenize_monty(char *tokens);
+void get_func_monty(char *line_items);
+char *tokenize_monty(char *buffer);
 /**
  *
  */
@@ -48,10 +48,11 @@ int main(int argc, char **argv)
 return (0);
 }
 
-void get_func_monty(char *tokens)
+void get_func_monty(char *line_items)
 {
-	int i = 0;
-	int len_tokens = 0;
+	int i;
+	int line_number = 0;
+	char *holder;
 
 	instruction_t opcodes[] = {
 		{"push", op_push},
@@ -59,33 +60,38 @@ void get_func_monty(char *tokens)
 		{NULL, NULL}
 			};
 	(void)opcodes;
-	if (tokens == NULL)
+	if (line_items == NULL)
 		return;
-	while (tokens[i] != '\0')
+	printf("----\n");
+	for (i = 0 ; opcodes[i].opcode != NULL; i++)
 	{
-		printf("%c", tokens[i]);
-		len_tokens++;
+		if (opcodes[i].opcode == opcodes[i].f)
+		{
+			printf("%s", opcodes[i].f);
+		}
+	}
+	printf("----\n");
+	holder = strdup(line_items);
+	i = 0;
+	while (holder[i] != '\0')
+	{
+		printf("%c\n", holder[i]);
+		line_number++;
 		i++;
 	}
 }
 
-void tokenize_monty(char *tokens)
+char *tokenize_monty(char *buffer)
 {
 	char *line_items;
-	int i = 0;
 
-	printf("start\n");
-	printf("%s", tokens);
-	printf("finish\n");
-	line_items = strtok(tokens, " ");
+	line_items = strtok(buffer, " ");
 	while (line_items != NULL)
 	{
-		for (i = 0; line_items != NULL; i++)
-		{
-			printf("%c\n", line_items[i]);
-			line_items = strtok(NULL, " ");
-		}
+		get_func_monty(line_items);
+		line_items = strtok(NULL, " ");
 	}
+	return (line_items);
 }
 
 void op_push(stack_t **stack, unsigned int line_number)
